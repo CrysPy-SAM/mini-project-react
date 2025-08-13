@@ -14,6 +14,7 @@ export default function SearchBox() {
       let data = await response.json();
       console.log(data);
       let result = {
+        City:city,
         temp: data.main.temp,
         tempMin: data.main.temp_min,
         tempMax: data.main.temp_max,
