@@ -1,14 +1,13 @@
-// import "./App.css";
 import SearchBox from "./SerchBox";
 import InfoBox from "./InfoBox";
+import "./App.css";
 
 function App() {
-
   return (
-    <>
-      <SearchBox/>
-      <InfoBox/>
-    </>
+    <div className="app-container">
+      <SearchBox />
+      <InfoBox />
+    </div>
   );
 }
 

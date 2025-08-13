@@ -1,0 +1,14 @@
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; 
+  min-height: 100vh; 
+  gap: 20px; 
+}
+
+
+.weather-card {
+  width: 300px;
+}

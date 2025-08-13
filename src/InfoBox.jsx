@@ -22,31 +22,32 @@ export default function InfoBox() {
 
   return (
     <div className="InfoBox">
-      <h1>WeatherInfo - {info.weather}</h1>
-
-      <Card sx={{ maxWidth: 345 }}>
-        <CardMedia
-          sx={{ height: 140 }}
-          image={INIT_URL}
-          title="green iguana"
-        />
-        <CardContent>
-          <Typography gutterBottom variant="h5" component="div">
-            {info.City}
-          </Typography>
-          <Typography variant="body2" color="text.secondary" component={'span'}>
-            <p>Temperature = {info.temp}°C</p>
-            <p>Humidity = {info.humidity}%</p>
-            <p>Min Temp = {info.tempMin}°C</p>
-            <p>Max Temp = {info.tempMax}°C</p>
-            <p>The Weather can describe as <i>{info.weather}</i> and Feels Like {info.feelslike}°C</p>
-          </Typography>
-        </CardContent>
-        <CardActions>
-          <Button size="small">Share</Button>
-          <Button size="small">Learn More</Button>
-        </CardActions>
-      </Card>
+      <h3>WeatherInfo - {info.weather}</h3>
+      <div className='card-container'>
+        <Card sx={{ maxWidth: 345 }}>
+          <CardMedia
+            sx={{ height: 140 }}
+            image={INIT_URL}
+            title={info.weather}
+          />
+          <CardContent>
+            <Typography gutterBottom variant="h5" component="div">
+              {info.City}
+            </Typography>
+            <Typography variant="body2" color="text.secondary" component={'span'}>
+              <p>Temperature = {info.temp}°C</p>
+              <p>Humidity = {info.humidity}%</p>
+              <p>Min Temp = {info.tempMin}°C</p>
+              <p>Max Temp = {info.tempMax}°C</p>
+              <p>The Weather can describe as <i>{info.weather}</i> and Feels Like {info.feelslike}°C</p>
+            </Typography>
+          </CardContent>
+          <CardActions>
+            <Button size="small">Share</Button>
+            <Button size="small">Learn More</Button>
+          </CardActions>
+        </Card>
+      </div>
     </div>
   );
 }
